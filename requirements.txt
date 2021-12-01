@@ -35,12 +35,12 @@ python-dateutil==2.7.3
 pytz==2019.1
 pyusb==1.0.2
 qrcode==6.1
-reportlab==3.5.13
+reportlab==3.5.55
 requests==2.21.0
 zeep==3.2.0
 vatnumber==1.2
 vobject==0.9.6.1
-Werkzeug==0.14.1 ; sys_platform != 'win32'
+Werkzeug==0.15.0 ; sys_platform != 'win32'
 Werkzeug==0.16.0 ; sys_platform == 'win32'
 XlsxWriter==1.1.2
 xlwt==1.3.*

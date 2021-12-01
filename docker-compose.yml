@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  odoo:
+    image: odoo:13
+    ports:
+      - "8069:8069"
+      - "8072:8072"
+    tty: true
+    command: odoo
+    volumes:
+      - data:/var/lib/odoo
+      - ./custom_modules:/mnt/extra-addons
+      - ./etc:/etc/odoo
+  db:
+    image: postgres:14
+    command: postgres -c 'max_connections=300'
+    ports:
+      - "1034:5432"
+    environment:
+      - POSTGRES_PASSWORD=kamilia01
+      - POSTGRES_USER=irfanmfauzi
+      - POSTGRES_DB=postgres
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+volumes:
+  data:
+  postgresql:

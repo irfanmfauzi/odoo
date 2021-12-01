@@ -39,3 +39,6 @@ setup/win32/static/postgresql*.exe
 /man/
 /share/
 /src/
+
+/etc/odoo-server.log
+server_bot.pem
